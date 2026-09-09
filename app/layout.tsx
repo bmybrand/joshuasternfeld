@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import "@fontsource/jost/400.css";
+import "@fontsource/jost/600.css";
 import "@fontsource/inter/500.css";
 import "@fontsource/inter/600.css";
 import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/300.css";
 import { Header } from "@/components/Header";
 import "./globals.css";
 

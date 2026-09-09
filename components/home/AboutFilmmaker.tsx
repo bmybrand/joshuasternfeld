@@ -1,7 +1,9 @@
+import { Reveal } from "@/components/Reveal";
+
 export function AboutFilmmaker() {
   return (
     <section className="grid min-h-0 grid-cols-1 gap-12 bg-black px-6 py-[90px] text-white min-[1025px]:grid-cols-[minmax(0,1fr)_minmax(0,.95fr)] min-[1025px]:items-stretch min-[1025px]:gap-[4vw] min-[1025px]:px-[4.2vw] min-[1025px]:pt-[4.5vw] min-[1025px]:pb-[4.5vw]" id="about">
-      <div className="min-[1025px]:self-center">
+      <Reveal className="min-[1025px]:self-center" from="left">
         <h1 className="m-0 mb-7 text-[clamp(2rem,3.2vw,3.5rem)] leading-none font-bold tracking-[-.025em] uppercase">About the Filmmaker</h1>
         <div className="w-full font-[Jost,sans-serif] text-[15px] leading-[1.5] font-normal text-white [&_p]:mb-[1.25em]">
         <p>Josh Sternfeld developed an interest in filmmaking as a teenager, and studied at NYU Graduate Film School, where he wrote and directed the award-winning short film <em>Balloons, Streamers</em>. The film screened at the 1997 New York Film Festival, 1998 Sundance Film Festival, and was distributed by the Sundance Channel and Canal+, where it broadcast from 1999-2003.</p>
@@ -13,10 +15,10 @@ export function AboutFilmmaker() {
         <p>In addition to his feature work, Josh also directs brand campaigns for online media – notably StyleCaster, Peloton Cycle and the Viñoly Foundation. He has also taught screenwriting and film production at New York University/Tisch School of the Arts.</p>
         <p>Josh lives in New York City with his wife and daughter.</p>
         </div>
-      </div>
-      <div className="min-h-0 overflow-hidden min-[1025px]:max-h-[950px]">
+      </Reveal>
+      <Reveal className="min-h-0 overflow-hidden min-[1025px]:max-h-[950px]" from="right" delay={100}>
         <img className="aspect-[3/4] h-full max-h-[950px] w-full object-cover object-top" src="/images/Josh-Sternfeld-headshot.webp" alt="Josh Sternfeld" loading="lazy" decoding="async" />
-      </div>
+      </Reveal>
     </section>
   );
 }

@@ -23,6 +23,7 @@ function Brand({ menu = false }: { menu?: boolean }) {
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [ready, setReady] = useState(false);
 
   function scrollToSection(
     event: React.MouseEvent<HTMLAnchorElement>,
@@ -46,6 +47,11 @@ export function Header() {
   }
 
   useEffect(() => {
+    const frame = requestAnimationFrame(() => setReady(true));
+    return () => cancelAnimationFrame(frame);
+  }, []);
+
+  useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     const heroVideo = document.querySelector<HTMLVideoElement>("[data-hero-video]");
     if (heroVideo) {
@@ -65,7 +71,7 @@ export function Header() {
 
   return (
     <>
-      <header className="absolute top-3 right-[18px] left-[18px] z-20 flex h-[70px] items-center justify-between border-0 px-1.5 max-[520px]:top-2 max-[520px]:right-3 max-[520px]:left-3 max-[520px]:px-2">
+      <header className={`absolute top-3 right-[18px] left-[18px] z-20 flex h-[70px] items-center justify-between border-0 px-1.5 transition-[opacity,transform] duration-700 ease-out motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none max-[520px]:top-2 max-[520px]:right-3 max-[520px]:left-3 max-[520px]:px-2 ${ready ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"}`}>
         <Brand />
         <nav className="hidden items-center min-[1025px]:flex" aria-label="Main navigation">
           {links.map((link) => (

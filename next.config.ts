@@ -8,7 +8,6 @@ const nextConfig: NextConfig = {
       "meskada",
       "market-trip",
       "amy-makes-three",
-      "showreel",
       "peloton",
       "fortress-snipers-eye",
       "civic-architecture",
@@ -16,13 +15,18 @@ const nextConfig: NextConfig = {
 
     return [
       ...slugs.map((slug) => ({
-        source: `/${slug}`,
-        destination: `/projects/${slug}`,
+        source: `/projects/${slug}`,
+        destination: `/${slug}`,
         permanent: true,
       })),
       {
+        source: "/projects/showreel",
+        destination: "/showreel",
+        permanent: true,
+      },
+      {
         source: "/civic-architecture.html",
-        destination: "/projects/civic-architecture",
+        destination: "/civic-architecture",
         permanent: true,
       },
     ];
