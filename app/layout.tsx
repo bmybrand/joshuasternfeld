@@ -6,6 +6,7 @@ import "@fontsource/inter/600.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/300.css";
 import { Header } from "@/components/Header";
+import { BackToTopButton } from "@/components/BackToTopButton";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className="m-0 bg-[#0a0a09] font-[Jost,sans-serif] text-[#f1f0eb] selection:bg-[#f0ef18] selection:text-black">
         <Header />
         {children}
+        <BackToTopButton />
       </body>
     </html>
   );

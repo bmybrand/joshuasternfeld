@@ -22,9 +22,9 @@ export function ContactSection() {
           <p><a href="tel:+12126050301">212-605-0301</a><br /><a href="mailto:rlsentlaw@aol.com">rlsentlaw@aol.com</a></p>
         </div>
       </Reveal>
-      <Reveal className="col-start-1 row-start-3 text-center min-[1025px]:row-start-2" delay={200}>
-        <p className="m-0 font-[Jost,sans-serif] text-[17px] leading-6 font-normal text-white">© 2026 Joshua Sternfeld – Filmmaker. All rights reserved</p>
-      </Reveal>
+      <p className="col-start-1 row-start-3 m-0 text-center font-[Jost,sans-serif] text-[17px] leading-6 font-normal text-white min-[1025px]:row-start-2">
+        © 2026 Joshua Sternfeld – Filmmaker. All rights reserved
+      </p>
     </section>
   );
 }
